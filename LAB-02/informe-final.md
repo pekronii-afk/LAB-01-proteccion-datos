@@ -29,7 +29,6 @@ Las claves no se guardan junto con los scripts porque cualquiera que vea el cód
 - En la tabla insegura se ve la contraseña Password123 tal cual
 - El hash con crypt() sale diferente cada vez por la sal, y al comprobar salió true con la contraseña correcta y false con la incorrecta
 - El RFC cifrado no se puede leer y solo se recupera con la clave correcta
-- TLS en el servidor: (pon aquí si salió on u off)
 
 ## 7. Problemas encontrados
 

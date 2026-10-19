@@ -9,7 +9,10 @@ Ver el problema de escribir la clave dentro de un script
 Se hizo el archivo `sql/ejemplo-mala-practica.sql` con esto
 
 ```sql
-SELECT pgp_sym_decrypt(rfc_cifrado, 'CLAVE-DE-PRUEBA')
+SELECT pgp_sym_decrypt(
+    rfc_cifrado,
+    'CLAVE-DE-PRUEBA'
+)
 FROM clientes_protegidos;
 ```
 
@@ -24,19 +27,19 @@ grep -RniE 'password|passwd|secret|token|api_key|clave' sql/
 ## Resultado obtenido
 
 ```
-sql/02-cifrado-datos.sql:8:VALUES ('Ana López', pgp_sym_encrypt('LOPA900101ABC', 'CLAVE-DE-PRUEBA'));
-sql/02-cifrado-datos.sql:14:pgp_sym_decrypt(rfc_cifrado, 'CLAVE-DE-PRUEBA') AS rfc
-sql/02-cifrado-datos.sql:18:pgp_sym_decrypt(rfc_cifrado, 'CLAVE-EQUIVOCADA') AS rfc
+sql/02-cifrado-datos.sql:13:    pgp_sym_encrypt('LOPA900101ABC', 'CLAVE-DE-PRUEBA')
+sql/02-cifrado-datos.sql:24:        'CLAVE-DE-PRUEBA'
+sql/02-cifrado-datos.sql:33:        'CLAVE-EQUIVOCADA'
 sql/01-credenciales.sql:10:    password VARCHAR(100) NOT NULL
 sql/01-credenciales.sql:13:INSERT INTO usuarios_insegura (usuario, password)
 sql/01-credenciales.sql:14:VALUES ('juan', 'Password123');
-sql/01-credenciales.sql:19:SELECT crypt('Password123', gen_salt('bf'));
-sql/01-credenciales.sql:21:SELECT crypt('Password123', gen_salt('bf'));
-sql/01-credenciales.sql:26:    password_hash TEXT NOT NULL
-sql/01-credenciales.sql:29:INSERT INTO usuarios_segura (usuario, password_hash)
-sql/01-credenciales.sql:30:VALUES ('juan', crypt('Password123', gen_salt('bf')));
-sql/01-credenciales.sql:36:password_hash = crypt('Password123', password_hash) AS contraseña_correcta
-sql/01-credenciales.sql:41:password_hash = crypt('OtraPassword', password_hash) AS contraseña_correcta
+sql/01-credenciales.sql:20:    'Password123',
+sql/01-credenciales.sql:25:    'Password123',
+sql/01-credenciales.sql:32:    password_hash TEXT NOT NULL
+sql/01-credenciales.sql:35:INSERT INTO usuarios_segura (usuario, password_hash)
+sql/01-credenciales.sql:38:    crypt('Password123', gen_salt('bf'))
+sql/01-credenciales.sql:46:    password_hash = crypt('Password123', password_hash)
+sql/01-credenciales.sql:53:    password_hash = crypt('OtraPassword', password_hash)
 ```
 
 Todo lo que salió son datos de prueba del laboratorio, no hay contraseñas ni claves reales

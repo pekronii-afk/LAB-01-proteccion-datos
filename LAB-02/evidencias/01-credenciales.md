@@ -12,10 +12,15 @@ Script `sql/01-credenciales.sql`
 SELECT *
 FROM usuarios_insegura;
 
-SELECT crypt('Password123', gen_salt('bf'));
+SELECT crypt(
+    'Password123',
+    gen_salt('bf')
+);
 
-SELECT usuario,
-password_hash = crypt('Password123', password_hash) AS contraseña_correcta
+SELECT
+    usuario,
+    password_hash = crypt('Password123', password_hash)
+        AS contraseña_correcta
 FROM usuarios_segura
 WHERE usuario = 'juan';
 ```

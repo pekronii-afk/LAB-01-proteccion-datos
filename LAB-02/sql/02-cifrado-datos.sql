@@ -4,16 +4,32 @@ CREATE TABLE clientes_protegidos (
     rfc_cifrado BYTEA NOT NULL
 );
 
-INSERT INTO clientes_protegidos (nombre, rfc_cifrado)
-VALUES ('Ana López', pgp_sym_encrypt('LOPA900101ABC', 'CLAVE-DE-PRUEBA'));
+INSERT INTO clientes_protegidos (
+    nombre,
+    rfc_cifrado
+)
+VALUES (
+    'Ana López',
+    pgp_sym_encrypt('LOPA900101ABC', 'CLAVE-DE-PRUEBA')
+);
 
 SELECT *
 FROM clientes_protegidos;
 
-SELECT id, nombre,
-pgp_sym_decrypt(rfc_cifrado, 'CLAVE-DE-PRUEBA') AS rfc
+SELECT
+    id,
+    nombre,
+    pgp_sym_decrypt(
+        rfc_cifrado,
+        'CLAVE-DE-PRUEBA'
+    ) AS rfc
 FROM clientes_protegidos;
 
-SELECT id, nombre,
-pgp_sym_decrypt(rfc_cifrado, 'CLAVE-EQUIVOCADA') AS rfc
+SELECT
+    id,
+    nombre,
+    pgp_sym_decrypt(
+        rfc_cifrado,
+        'CLAVE-EQUIVOCADA'
+    ) AS rfc
 FROM clientes_protegidos;

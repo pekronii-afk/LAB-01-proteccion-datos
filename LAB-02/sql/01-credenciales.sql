@@ -16,9 +16,15 @@ VALUES ('juan', 'Password123');
 SELECT *
 FROM usuarios_insegura;
 
-SELECT crypt('Password123', gen_salt('bf'));
+SELECT crypt(
+    'Password123',
+    gen_salt('bf')
+);
 
-SELECT crypt('Password123', gen_salt('bf'));
+SELECT crypt(
+    'Password123',
+    gen_salt('bf')
+);
 
 CREATE TABLE usuarios_segura (
     id BIGSERIAL PRIMARY KEY,
@@ -27,17 +33,24 @@ CREATE TABLE usuarios_segura (
 );
 
 INSERT INTO usuarios_segura (usuario, password_hash)
-VALUES ('juan', crypt('Password123', gen_salt('bf')));
+VALUES (
+    'juan',
+    crypt('Password123', gen_salt('bf'))
+);
 
 SELECT *
 FROM usuarios_segura;
 
-SELECT usuario,
-password_hash = crypt('Password123', password_hash) AS contraseña_correcta
+SELECT
+    usuario,
+    password_hash = crypt('Password123', password_hash)
+        AS contraseña_correcta
 FROM usuarios_segura
 WHERE usuario = 'juan';
 
-SELECT usuario,
-password_hash = crypt('OtraPassword', password_hash) AS contraseña_correcta
+SELECT
+    usuario,
+    password_hash = crypt('OtraPassword', password_hash)
+        AS contraseña_correcta
 FROM usuarios_segura
 WHERE usuario = 'juan';

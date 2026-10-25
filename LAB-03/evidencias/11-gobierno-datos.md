@@ -11,19 +11,3 @@
 | codigo_postal | Facturación y estadísticas | Facturación | Facturación, analítica solo por región | Permisos y generalizar | Mientras sea cliente | Anonimizar |
 
 El DBA no aparece como usuario de los datos porque él administra la base pero no tiene que usar los datos para nada. Dirección es la que aprueba la finalidad y la retención
-
-## Actividad 13 Controles técnicos y administrativos
-
-| Medida | Técnico | Administrativo |
-|---|---|---|
-| Crear roles de PostgreSQL | Sí | |
-| Política de retención | | Sí |
-| Cifrado de datos | Sí | |
-| Procedimiento para solicitudes ARCO | | Sí |
-| Vista con información limitada | Sí | |
-| Clasificación de información | Sí | Sí |
-| Registro de auditoría | Sí | |
-| Política de control de acceso | Sí | Sí |
-
-- La clasificación es administrativa porque se decide en un documento qué tan sensible es cada dato, pero también técnica cuando se refleja en la base, por ejemplo separando esquemas
-- La política de control de acceso es administrativa porque define quién puede ver qué, y técnica porque eso se implementa con roles y GRANT

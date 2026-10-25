@@ -21,3 +21,19 @@ La fecha de nacimiento, la dirección y el RFC, porque solo se ocupan para cosas
 
 ¿Cómo aplicarías privacidad por defecto?
 Que los campos opcionales empiecen vacíos, que solo se pidan los datos obligatorios, que ningún rol tenga acceso a la tabla hasta que se le dé y que las demás áreas vean la información por vistas con lo mínimo
+
+## Actividad 13 Controles técnicos y administrativos
+
+| Medida | Técnico | Administrativo |
+|---|---|---|
+| Crear roles de PostgreSQL | Sí | |
+| Política de retención | | Sí |
+| Cifrado de datos | Sí | |
+| Procedimiento para solicitudes ARCO | | Sí |
+| Vista con información limitada | Sí | |
+| Clasificación de información | Sí | Sí |
+| Registro de auditoría | Sí | |
+| Política de control de acceso | Sí | Sí |
+
+- La clasificación es administrativa porque se decide en un documento qué tan sensible es cada dato, pero también técnica cuando se refleja en la base, por ejemplo separando esquemas
+- La política de control de acceso es administrativa porque define quién puede ver qué, y técnica porque eso se implementa con roles y GRANT

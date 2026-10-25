@@ -2,14 +2,15 @@ SHOW ssl;
 SHOW ssl_min_protocol_version;
 
 SELECT
-    pid,
-    usename,
-    client_addr,
-    ssl,
-    version,
-    cipher
-FROM pg_stat_ssl
-WHERE pid = pg_backend_pid();
+    s.pid,
+    a.usename,
+    a.client_addr,
+    s.ssl,
+    s.version,
+    s.cipher
+FROM pg_stat_ssl s
+JOIN pg_stat_activity a ON a.pid = s.pid
+WHERE s.pid = pg_backend_pid();
 
 SHOW listen_addresses;
 

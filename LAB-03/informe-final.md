@@ -46,7 +46,7 @@ Guardar todo para siempre va contra la minimización. El periodo se tiene que de
 
 ## 8. Gobierno de datos
 
-Cada dato tiene un área responsable y solo lo ven las áreas que lo ocupan. La matriz y la tabla de controles técnicos y administrativos están en `evidencias/11-gobierno-datos.md`
+Cada dato tiene un área responsable y solo lo ven las áreas que lo ocupan. La matriz está en `evidencias/11-gobierno-datos.md` y la tabla de controles técnicos y administrativos en `evidencias/12-privacidad-diseno.md`
 
 ## 9. Evaluación integral
 

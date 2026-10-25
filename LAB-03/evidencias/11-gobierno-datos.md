@@ -2,12 +2,12 @@
 
 | Dato | Finalidad | Responsable | Usuarios autorizados | Protección | Retención | Acción al finalizar |
 |---|---|---|---|---|---|---|
-| nombre | Atención y facturación | Atención al cliente | Atención al cliente, facturación | Permisos por rol | Mientras sea cliente | Eliminar |
-| correo | Contacto | Atención al cliente | Atención al cliente | Permisos y enmascaramiento | Mientras sea cliente | Eliminar |
-| telefono | Contacto | Atención al cliente | Atención al cliente | Permisos y enmascaramiento | Mientras sea cliente | Eliminar |
-| rfc | Facturación | Facturación | Facturación | Cifrado y permisos | Lo que diga la ley fiscal | Eliminar |
-| edad | Estadísticas | Analítica | Analítica en rangos | Vista con rangos | Mientras sea cliente | Anonimizar |
-| ciudad | Estadísticas | Analítica | Analítica agregada | Vista agregada | Mientras sea cliente | Anonimizar |
-| codigo_postal | Facturación y estadísticas | Facturación | Facturación, analítica solo por región | Permisos y generalizar | Mientras sea cliente | Anonimizar |
+| nombre | Atender y facturar | Atención al cliente | Atención y facturación | Permisos | Mientras sea cliente | Eliminar |
+| correo | Contacto | Atención al cliente | Atención | Permisos y enmascaramiento | Mientras sea cliente | Eliminar |
+| telefono | Contacto | Atención al cliente | Atención | Permisos y enmascaramiento | Mientras sea cliente | Eliminar |
+| rfc | Facturar | Facturación | Facturación | Cifrado | Lo que diga la ley | Eliminar |
+| edad | Estadísticas | Analítica | Analítica en rangos | Vista | Mientras sea cliente | Anonimizar |
+| ciudad | Estadísticas | Analítica | Analítica | Vista | Mientras sea cliente | Anonimizar |
+| codigo_postal | Facturar y estadísticas | Facturación | Facturación y analítica | Permisos | Mientras sea cliente | Anonimizar |
 
-El DBA no aparece como usuario de los datos porque él administra la base pero no tiene que usar los datos para nada. Dirección es la que aprueba la finalidad y la retención
+El DBA no aparece porque administra la base pero no usa los datos

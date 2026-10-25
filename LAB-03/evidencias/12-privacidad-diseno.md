@@ -1,26 +1,22 @@
 # Actividad 12 Privacidad por diseño
 
 ¿Qué problemas identificas?
-Se guardan datos que no se necesitan, como salario, estado civil, ocupación y fecha de nacimiento. No hay llave primaria ni NOT NULL y todo es TEXT, entonces no hay control de qué se guarda. Además se repite la edad con la fecha de nacimiento
+Guarda datos que no se ocupan como salario, estado civil y ocupación, no tiene llave primaria y todo es TEXT
 
 ¿Qué principio de privacidad se está ignorando?
-La minimización de datos, y también la finalidad, porque "por si después necesitamos alguno" no es una finalidad
+La minimización
 
 ¿Qué preguntas realizarías antes de aprobar el diseño?
-- ¿Para qué se va a usar cada campo?
-- ¿Qué área lo ocupa?
-- ¿Qué dice el aviso de privacidad?
-- ¿Por cuánto tiempo se va a guardar?
-- ¿Quién va a tener acceso?
+¿Para qué es cada campo?, ¿quién lo ocupa?, ¿cuánto tiempo se guarda? y ¿quién lo puede ver?
 
 ¿Qué datos eliminarías?
-Salario, estado civil, ocupación y la edad, porque si de verdad se ocupa se saca de la fecha de nacimiento
+Salario, estado civil, ocupación y edad, porque se puede sacar de la fecha de nacimiento
 
 ¿Qué datos requerirían una justificación adicional?
-La fecha de nacimiento, la dirección y el RFC, porque solo se ocupan para cosas específicas como facturar o enviar algo
+Fecha de nacimiento, dirección y RFC
 
 ¿Cómo aplicarías privacidad por defecto?
-Que los campos opcionales empiecen vacíos, que solo se pidan los datos obligatorios, que ningún rol tenga acceso a la tabla hasta que se le dé y que las demás áreas vean la información por vistas con lo mínimo
+Pedir solo lo obligatorio, que ningún rol tenga acceso hasta que se le dé y que las áreas vean los datos por vistas
 
 ## Actividad 13 Controles técnicos y administrativos
 
@@ -35,5 +31,4 @@ Que los campos opcionales empiecen vacíos, que solo se pidan los datos obligato
 | Registro de auditoría | Sí | |
 | Política de control de acceso | Sí | Sí |
 
-- La clasificación es administrativa porque se decide en un documento qué tan sensible es cada dato, pero también técnica cuando se refleja en la base, por ejemplo separando esquemas
-- La política de control de acceso es administrativa porque define quién puede ver qué, y técnica porque eso se implementa con roles y GRANT
+La clasificación y la política de control de acceso son las dos porque se deciden en un documento y luego se aplican en la base con esquemas, roles y GRANT

@@ -19,18 +19,78 @@ Casi todos los campos de clientes son datos personales. Nombre, correo, teléfon
 
 ## 4. Minimización
 
-Soporte no ocupa el RFC, la edad ni el código postal, por eso clientes_soporte solo tiene id, nombre, correo y teléfono
+Actividad 2, se creó clientes_soporte solo con id, nombre, correo y teléfono
+
+¿Todos los campos son necesarios para atención al cliente?
+No, solo nombre, correo y teléfono
+
+¿Por qué soporte necesitaría conocer el RFC?
+No lo necesita, eso es de facturación
+
+¿Necesita conocer la edad?
+No
+
+¿Necesita conocer el código postal?
+No
+
+¿Qué principio de privacidad está relacionado con esta decisión?
+Minimización de datos
 
 ## 5. Control de acceso
 
-A analítica se le dan datos agrupados en vez de la tabla completa. El rol analista solo puede ver la vista v_analitica_clientes, que tiene ciudad y rango de edad, no puede consultar clientes ni ver nombre, correo o RFC. Aquí se aplica minimización y mínimo privilegio
+Actividad 3
+
+¿Por qué esta información puede ser más apropiada para analítica que entregar directamente la tabla completa de clientes?
+Porque solo ven cuántos clientes hay por ciudad y edad sin saber quién es cada uno
+
+Actividad 4, se creó el rol analista con permiso solo a la vista v_analitica_clientes
+
+¿Qué información puede consultar el rol?
+La ciudad y el rango de edad
+
+¿Puede consultar directamente clientes?
+No, no tiene permiso sobre la tabla
+
+¿Puede obtener nombre, correo y RFC?
+No, la vista no tiene esas columnas
+
+¿Qué principio de privacidad estás aplicando?
+Minimización y limitación de finalidad
+
+¿Qué principio de seguridad estás aplicando?
+Mínimo privilegio
 
 ## 6. Derechos ARCO
 
-- Acceso: además de los datos hay que decirle al cliente para qué se usan y quién los tiene
-- Rectificación: se cambió solo el correo y debería quedar registrado quién lo cambió y que estaba autorizado
-- Cancelación: antes de borrar hay que ver en qué otros lados está el dato (`evidencias/08-ciclo-vida.md`)
-- Oposición: no se borra todo, solo se deja de usar el dato para eso, por ejemplo con un campo que lo marque. Eso no lo decide solo el DBA
+Actividad 6 Derecho de acceso
+
+¿Qué información adicional debería proporcionar la organización además del resultado de esta consulta?
+Para qué se usan los datos, quién los tiene, si se pasaron a alguien y cuánto tiempo se guardan
+
+Actividad 7 Derecho de rectificación
+
+¿Cómo podría comprobarse que el cambio fue autorizado?
+Con una solicitud del cliente aprobada por el área de privacidad
+
+¿Debería registrarse quién realizó el cambio?
+Sí, quién lo hizo y cuándo
+
+¿Por qué la trazabilidad será importante?
+Para saber si alguien cambió datos sin permiso
+
+Actividad 8 Derecho de cancelación
+
+Está en `evidencias/08-ciclo-vida.md`
+
+Actividad 9 Derecho de oposición
+
+¿Es necesario eliminar inmediatamente todos sus datos de la base?
+No
+
+- Qué se mantiene: lo que se ocupa para la operación y lo que pide la ley, como las facturas
+- Qué deja de usarse: el dato para la finalidad a la que se opuso, por ejemplo promociones
+- Cómo separar finalidades: un campo que marque que no quiere promociones y vistas que lo filtren
+- Por qué no lo decide solo el DBA: porque es algo legal y de la empresa, el DBA solo hace la parte técnica
 
 ## 7. Retención
 

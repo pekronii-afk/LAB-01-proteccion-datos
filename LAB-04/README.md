@@ -8,7 +8,7 @@ Revisar qué tiene expuesto PostgreSQL y dejar solo lo necesario
 
 ## Entorno
 
-PostgreSQL 16 en mi compu, porque el servidor de la escuela no dejaba conectarse
+PostgreSQL 18 en mi compu, porque el servidor de la escuela no dejaba conectarse
 
 ## Superficie de ataque inicial
 
@@ -53,7 +53,7 @@ La arquitectura con red privada expone menos porque desde internet no se llega a
 
 pg_hba.conf
 
-Solo hay reglas para 127.0.0.1/32 y ::1/128 con scram-sha-256, no hay 0.0.0.0/0 ni ::/0. La regla permisiva está en `configuracion/cambios.md`
+Hay reglas local y para 127.0.0.1 y ::1, más las de replicación, todas con scram-sha-256. No hay 0.0.0.0/0 ni ::/0. La regla permisiva está en `configuracion/cambios.md`
 
 Autenticación
 
@@ -111,7 +111,7 @@ Exposición de red
 
 ```
 Dirección de escucha:
-127.0.0.1
+127.0.0.1 y ::1
 
 Puerto:
 5432

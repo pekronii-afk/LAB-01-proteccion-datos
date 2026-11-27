@@ -1,6 +1,5 @@
 # Registro de cambios y conciliación
 
-El registro de cambios está en `sql/04-registro-cambios.sql`. Lo que comparé fue la bitácora completa (`E5-bitacora-postgresql.log`, juntando los 4 archivos de log) contra `gobierno.solicitudes_cambio`, donde solo existe CAM-2026-014. Las horas están en UTC
 
 | Momento (bitácora) | Usuario | Sentencia | Folio que lo autoriza | ¿Autorizado? | Hallazgo |
 |---|---|---|---|---|---|

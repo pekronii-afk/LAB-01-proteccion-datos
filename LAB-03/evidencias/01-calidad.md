@@ -1,6 +1,5 @@
 # Calidad de datos
 
-Las consultas están en `sql/01-verificaciones-calidad.sql`. La tabla `clientes` de este laboratorio no tiene `edad` ni `codigo_postal`, así que el INSERT de la guía marcaba error (se ve en `E5-bitacora-postgresql.log`, línea 945). Lo corrí sin esas columnas y en lugar de revisar la edad revisé que el teléfono tuviera 10 dígitos
 
 Después de insertar los registros 7 y 8 había 7 clientes en total
 

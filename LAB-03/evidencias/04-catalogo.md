@@ -1,7 +1,5 @@
 # Catálogo mínimo
 
-El inventario de PostgreSQL salió de `sql/03-inventario-tablas.sql`. Ahí aparecieron `auditoria.cambios_clientes` (4 filas, 32 kB) y `public.clientes` (7 filas, 24 kB), las dos con `postgres` como propietario técnico. `gobierno.solicitudes_cambio` se creó después, en la Actividad 7. Los objetos de MongoDB vienen del LAB-02
-
 | ID | Conjunto de datos | Motor | Ubicación | Propietario | Custodio | Clasificación | Contiene datos personales | Finalidad | Conservación | Diccionario |
 |---|---|---|---|---|---|---|---|---|---|---|
 | CAT-01 | Clientes | PostgreSQL 16 | u3-postgres / comercial / public.clientes | Gerencia Comercial | DBA | Confidencial | Sí | Venta y facturación | Mientras sea cliente, después se aplica POL-03 | `COMMENT` + `diccionario-clientes.csv` |

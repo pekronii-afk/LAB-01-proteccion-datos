@@ -1,6 +1,4 @@
 -- Actividad 1: verificaciones de calidad sobre clientes
--- La tabla de este laboratorio no tiene las columnas edad ni codigo_postal,
--- por eso el INSERT va sin ellas y la revisión de edad se cambió por una de teléfono
 
 INSERT INTO clientes (id, nombre, correo, telefono, rfc, ciudad) VALUES
 (7, 'Ana Lopez', 'ANA.LOPEZ@example.test', '6671234567', 'LOAA850315AB', 'Culiacan'),

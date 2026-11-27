@@ -1,9 +1,5 @@
 # Diccionario operativo
 
-Los comentarios se pusieron con `COMMENT` (`sql/02-comentarios-diccionario.sql`) y se exportaron a `diccionario-clientes.csv`. El CSV se sacó antes del cambio CAM-2026-014, por eso no trae `canal_alta`. Esa columna tiene su comentario desde la Actividad 7
-
-Aquí lo completo con clasificación y finalidad
-
 | Columna | Tipo | Nulos | Descripción | Clasificación | Finalidad |
 |---|---|---|---|---|---|
 | id | bigint | No | Identificador interno del cliente | Interno | Relacionar registros |

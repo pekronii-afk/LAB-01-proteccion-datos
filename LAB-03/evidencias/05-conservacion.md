@@ -1,6 +1,5 @@
 # Conservación de bitácoras
 
-No pongo plazos legales inventados. Donde depende de una ley va "Plazo a confirmar con el área jurídica"
 
 | Registro | Ubicación actual | Riesgo de pérdida observado | Sensibilidad | Periodo propuesto | Justificación | Dónde se conserva | Quién puede leerlo | Acción al vencer |
 |---|---|---|---|---|---|---|---|---|

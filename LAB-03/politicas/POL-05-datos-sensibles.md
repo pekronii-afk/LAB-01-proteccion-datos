@@ -10,4 +10,3 @@
 | Evidencia | Líneas `AUDIT` de `E5-bitacora-postgresql.log` (por ejemplo la 326, lectura del RFC del cliente 3), `E3-disparadores.txt`, `E4-muestra-auditoria.txt` y `E5-bitacora-postgresql.sha256` |
 | Revisión | Anual |
 
-Esta política manda sobre POL-03: si hay una investigación abierta, la auditoría no se borra aunque ya haya vencido

@@ -19,9 +19,9 @@ Porque el DBA es el custodio, no el dueño del dato. No sabe cuál es el RFC cor
 
 2. ¿Qué restricción habría evitado cada hallazgo y quién debe aprobarla?
 
-- C1: un índice único sobre `lower(correo)`
-- C2 y C4: un `CHECK` con la expresión regular del RFC, otro para el correo y otro para que el teléfono tenga 10 dígitos
-- C3: `NOT NULL` en `rfc`, aunque solo si el negocio dice que siempre se factura
+- C1: un índice único sobre lower(correo)
+- C2 y C4: un CHECK con la expresión regular del RFC, otro para el correo y otro para que el teléfono tenga 10 dígitos
+- C3: NOT NULL en rfc, aunque solo si el negocio dice que siempre se factura
 
 Las tiene que aprobar la Gerencia Comercial por POL-06, porque cambian la estructura en producción y pueden rechazar altas que hoy sí entran. El DBA solo las propone y las ejecuta con folio
 

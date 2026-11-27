@@ -124,14 +124,3 @@ No corregí ninguno de estos hallazgos, solo los registré
 | `evidencias/E5-bitacora-postgresql.sha256` | Hash de E5 |
 | `evidencias/diccionario-clientes.csv` | Diccionario exportado |
 | `evidencias/E6-mongodb/` | Perfilador, bitácora de `mongod`, sus hashes y la comparación del LAB-02 |
-
-```text
-ac6bcd3b5fa2556215ee890eb3931e209ef0ca7e59325911f6fd7dcd208d18ed  E1-configuracion-registro.txt
-3f508f9ac90e824dbf7fc60d8d3da8e52868a285d097d59658cf08a134b0ec68  E2-privilegios.txt
-3f1b4fdf71681c2f0b57eef2393bee3097ee15b8f078b769134fb5c88cf3e5bf  E3-disparadores.txt
-ede5c447502bfd4cce353ae0d47170d667a08737bd9fb49e48570e79ed034d1d  E4-muestra-auditoria.txt
-c36899d245407f3ed767fbdee5c3ba5d7e211be0b94ec6ab73ca9d2f39371b05  E5-bitacora-postgresql.log
-86cf853737935345db9592a49b080e78743963f553d36c0f96913d22b9d7254f  diccionario-clientes.csv
-f64c1037c6e07848f2854e2535692d262e1857aaa4d2dc35eb4be37d4af73fad  E6-mongodb/system-profile.json
-be549ad1e69f4a71a2ffdde385748338deebed8056f28b568eca43acc6a4abf7  E6-mongodb/bitacora-mongod.log
-```
